@@ -2,10 +2,10 @@
 <template
     format="5"
     revision="4"
-    name="MVP Activity"
+    name="MVVM Activity"
     minApi="9"
     minBuildApi="14"
-    description="Creates a new empty activity that uses MVP Pattern">
+    description="Creates a new empty activity that uses MVVM Pattern">
 
     <category value="Activity" />
     <formfactor value="Mobile" />
@@ -75,7 +75,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>template_mvp_activity.png</thumb>
+        <thumb>template_MVVM_activity.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl" />
