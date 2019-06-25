@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <template
-    format="5"
-    revision="4"
-    name="MVVM Activity"
-    minApi="9"
-    minBuildApi="14"
-    description="Creates a new empty activity that uses MVVM Pattern">
+        format="5"
+        revision="1"
+        name="MVVM Activity"
+        minApi="9"
+        minBuildApi="14"
+        description="Creates a new empty activity that uses MVVM Pattern">
 
     <category value="Activity" />
     <formfactor value="Mobile" />
@@ -35,13 +35,6 @@
         default="activity_main"
         visibility="generateLayout"
         help="The name of the layout to create for the activity" />
-
-    <parameter
-        id="generateBase"
-        name="Base Presenter and View"
-        type="boolean"
-        default="false"
-        help="If true, this activity will create base presenter and view (automatically generated when new project)" />
 
     <parameter
         id="mainPackageName"

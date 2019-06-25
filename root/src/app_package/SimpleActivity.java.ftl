@@ -1,16 +1,6 @@
 package ${packageName};
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
-import android.content.Context;
-import ${superClassFqcn};
-import android.os.Bundle;
-<#if includeCppSupport!false>
-import android.widget.TextView;
-</#if>
-
-public class ${activityClass}Activity extends ${superClass} {
+public class ${activityClass}Activity extends ${SUPERCLASS} {
 
     private ${activityClass}Contract.Presenter mPresenter;
 
@@ -32,7 +22,7 @@ public class ${activityClass}Activity extends ${superClass} {
         }
 
         mPresenter = new ${activityClass}Presenter(view);
-<#include "../../../../common/jni_code_usage.java.ftl">
+<#include "../../../../common/jni_code_usage.kt.ftl">
     }
-<#include "../../../../common/jni_code_snippet.java.ftl">
+<#include "../../../../common/jni_code_snippet.kt.ftl">
 }
