@@ -35,6 +35,14 @@
             help="The name of the layout to create for the activity"/>
 
     <parameter
+            id="modelName"
+            name="Model Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="Main"
+            help="The name of the model for this feature"/>
+
+    <parameter
             id="viewModelName"
             name="ViewModel Name"
             type="string"

@@ -10,6 +10,9 @@
     <instantiate from="root/src/main/java/SimpleFragment.kt.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt"/>
 
+    <instantiate from="root/src/main/java/model/Simple.kt.ftl"
+                 to="${escapeXmlAttribute(srcOut)}/model/${modelName}.kt"/>
+
     <instantiate from="root/src/main/java/SimpleViewModel.kt.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${viewModelName}.kt"/>
 
