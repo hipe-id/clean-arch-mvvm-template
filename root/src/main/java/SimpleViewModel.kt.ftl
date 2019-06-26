@@ -1,9 +1,9 @@
 package ${packageName}
 
 import androidx.lifecycle.ViewModel
-import ${packageName}.interactor.*
+import ${packageName}.interactor.${interactorName}
 
-class ${viewModelName} constructor(private val getMovies: GetMovies) : ViewModel() {
+class ${viewModelName} constructor(private val ${interactorName?lower_case}: ${interactorName}) : ViewModel() {
 
     // TODO: Adjust your needs here
 }
