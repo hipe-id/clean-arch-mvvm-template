@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template
         format="5"
-        revision="1"
+        revision="3"
         name="MVVM Activity"
         minApi="9"
         minBuildApi="14"
@@ -9,6 +9,15 @@
 
     <category value="Activity" />
     <formfactor value="Mobile" />
+
+    <parameter
+            id="activityClass"
+            name="Activity Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            suggest="${layoutToActivity(layoutName)}"
+            default="MainActivity"
+            help="The name of the activity class to create"/>
 
     <parameter
             id="fragmentClass"
