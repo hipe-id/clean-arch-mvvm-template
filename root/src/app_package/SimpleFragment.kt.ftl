@@ -1,11 +1,10 @@
 package ${packageName}
 
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
-class ${fragmentClass}Fragment : Fragment() {
+class ${fragmentClass} : Fragment() {
 
     // TODO: Implement by lazy ViewModel
 
