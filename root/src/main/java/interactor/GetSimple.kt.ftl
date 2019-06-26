@@ -1,4 +1,4 @@
-package ${packageName}
+package ${packageName}.interactor
 
 class GetSimple constructor(private val simpleRepository: SimpleRepository) {
 
