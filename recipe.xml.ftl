@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <recipe>
     <#if generateLayout>
-        <instantiate from="root/src/res/layout/fragment_simple.xml.ftl"
+        <instantiate from="root/src/main/res/layout/fragment_simple.xml.ftl"
                      to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml"/>
 
         <open file="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml"/>

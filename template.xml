@@ -2,7 +2,7 @@
 <template
         format="5"
         revision="6"
-        name="MVVM Activity"
+        name="MVVM Clean Arch"
         minApi="9"
         minBuildApi="14"
         description="Creates a new empty activity that uses MVVM Pattern">
