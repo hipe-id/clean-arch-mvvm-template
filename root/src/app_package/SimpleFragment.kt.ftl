@@ -1,17 +1,22 @@
-package ${packageName};
+package ${packageName}
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
-import butterknife.ButterKnife;
+class ${fragmentClass}Fragment : Fragment() {
 
-public class ${activityClass}Fragment extends Fragment implements ${activityClass}Contract.View {
+    // TODO: Implement by lazy ViewModel
 
-    public static ${activityClass}Fragment newInstance() {
-        return new ${activityClass}Fragment();
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // TODO: Init or setup view, viewmodel related, etc anything to setup here
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // TODO: Init or setup view, viewmodel related, etc anything to setup here
     }
 }

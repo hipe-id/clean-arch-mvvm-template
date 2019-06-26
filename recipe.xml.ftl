@@ -6,5 +6,5 @@
     </#if>
 
     <instantiate from="root/src/app_package/SimpleFragment.kt.ftl"
-                 to="${escapeXmlAttribute(srcOut)}/${activityClass}Fragment.kt"/>
+                 to="${escapeXmlAttribute(srcOut)}/${fragmentClass}Fragment.kt"/>
 </recipe>
