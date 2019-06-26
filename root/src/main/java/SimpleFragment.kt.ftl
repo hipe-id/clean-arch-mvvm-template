@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 
-class ${fragmentClass} : Fragment() {
+class ${fragmentName} : Fragment() {
 
     // TODO: Implement by lazy ViewModel
 

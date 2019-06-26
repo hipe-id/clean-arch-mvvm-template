@@ -20,11 +20,11 @@
             help="The name of the activity class to create"/>
 
     <parameter
-            id="fragmentClass"
+            id="fragmentName"
             name="Fragment Name"
             type="string"
             constraints="class|unique|nonempty"
-            suggest="${layoutToActivity(layoutName)}"
+            suggest="${layoutToFragment(layoutName)}"
             default="MainFragment"
             help="The name of the fragment class to create"/>
 
@@ -40,7 +40,7 @@
             name="Layout Name"
             type="string"
             constraints="layout|unique|nonempty"
-            suggest="${activityToLayout(fragmentClass)}"
+            suggest="${fragmentToLayout(fragmentName)}"
             default="activity_main"
             visibility="generateLayout"
             help="The name of the layout to create for the activity" />
