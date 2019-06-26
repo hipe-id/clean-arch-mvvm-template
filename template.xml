@@ -1,56 +1,45 @@
 <?xml version="1.0"?>
 <template
         format="5"
-        revision="3"
+        revision="6"
         name="MVVM Activity"
         minApi="9"
         minBuildApi="14"
         description="Creates a new empty activity that uses MVVM Pattern">
 
-    <category value="Activity" />
-    <formfactor value="Mobile" />
-
-    <parameter
-            id="activityClass"
-            name="Activity Name"
-            type="string"
-            constraints="class|unique|nonempty"
-            suggest="${layoutToActivity(layoutName)}"
-            default="MainActivity"
-            help="The name of the activity class to create"/>
+    <category value="UI Components"/>
+    <formfactor value="Mobile"/>
 
     <parameter
             id="fragmentName"
             name="Fragment Name"
             type="string"
             constraints="class|unique|nonempty"
-            suggest="${layoutToFragment(layoutName)}"
             default="MainFragment"
             help="The name of the fragment class to create"/>
 
     <parameter
-        id="generateLayout"
-        name="Generate Layout File"
-        type="boolean"
-        default="true"
-        help="If true, a layout file will be generated" />
+            id="generateLayout"
+            name="Generate Layout File"
+            type="boolean"
+            default="true"
+            help="If true, a layout file will be generated"/>
 
     <parameter
             id="layoutName"
             name="Layout Name"
             type="string"
             constraints="layout|unique|nonempty"
-            suggest="${fragmentToLayout(fragmentName)}"
             default="activity_main"
             visibility="generateLayout"
-            help="The name of the layout to create for the activity" />
+            help="The name of the layout to create for the activity"/>
 
     <parameter
-        id="packageName"
-        name="Package name"
-        type="string"
-        constraints="package"
-        default="com.mycompany.myapp" />
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
 
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
@@ -58,7 +47,7 @@
         <thumb>template_MVVM_activity.png</thumb>
     </thumbs>
 
-    <globals file="globals.xml.ftl" />
-    <execute file="recipe.xml.ftl" />
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
 
 </template>
