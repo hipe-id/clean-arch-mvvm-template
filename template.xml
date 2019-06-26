@@ -41,6 +41,14 @@
             constraints="package"
             default="com.mycompany.myapp"/>
 
+    <parameter
+            id="interactorName"
+            name="Interactor Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="GetSimple"
+            help="The name of the (usecase) interactor for repo and model"/>
+
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->

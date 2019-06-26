@@ -10,5 +10,9 @@
     <instantiate from="root/src/main/java/SimpleFragment.kt.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt"/>
 
+    <instantiate from="root/src/main/java/interactor/GetSimple.kt.ftl"
+                 to="${escapeXmlAttribute(srcOut)}/interactor/${interactorName}.kt"/>
+
     <open file="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt"/>
+    <open file="${escapeXmlAttribute(srcOut)}/interactor/${interactorName}.kt"/>
 </recipe>
