@@ -17,7 +17,7 @@
                  to="${escapeXmlAttribute(srcOut)}/domain/interactor/${interactorName}.${ktOrJavaExt}"/>
 
     <instantiate from="root/src/main/java/data/entity/SimpleEntity.${ktOrJavaExt}.ftl"
-                 to="${escapeXmlAttribute(srcOut)}/data/entity/${modelName}.${ktOrJavaExt}"/>
+                 to="${escapeXmlAttribute(srcOut)}/data/entity/${entityName}.${ktOrJavaExt}"/>
 
     <instantiate from="root/src/main/java/data/repository/SimpleRepositoryImpl.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryImpl}.${ktOrJavaExt}"/>
