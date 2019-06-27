@@ -1,4 +1,4 @@
-package ${packageName}
+package ${packageName}.data.entity
 
 import ${packageName}.entity.${entityName}
 
