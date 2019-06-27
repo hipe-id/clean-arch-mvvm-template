@@ -23,7 +23,9 @@ presentation
 - model
 - repository (local, mock, network)
 3. presentation layer 
-- mvvm, components, widget, custom ui, permission, utils
+- mvvm
+4. utils layer (available for all layer, not included on this template)
+- components, widget, custom ui, permission, utils
 
 ### TODO
 - [ ] Restrict minimum [dependencies to add](https://www.i-programmer.info/professional-programmer/resources-and-tools/6845-android-adt-template-format-document.html) go to *<dependency>* 
