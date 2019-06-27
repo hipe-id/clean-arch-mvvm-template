@@ -1,9 +1,13 @@
 package ${packageName}.data.entity;
 
-import ${packageName}.entity.${entityName};
+import ${packageName}.domain.model.${modelName};
 
-public class ${entityName}(private final Integer id) {
+// TODO: Add transformation into another entity or model here as well
+public class ${entityName} {
+
+    private Integer id;
+
     public ${modelName} to${modelName}() {
-        return ${modelName}(id);
+        return new ${modelName}(id);
     }
 }
