@@ -20,7 +20,7 @@
                  to="${escapeXmlAttribute(srcOut)}/data/entity/${modelName}.${ktOrJavaExt}"/>
 
     <instantiate from="root/src/main/java/data/repository/SimpleRepositoryImpl.${ktOrJavaExt}.ftl"
-                 to="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryName}.${ktOrJavaExt}"/>
+                 to="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryImpl}.${ktOrJavaExt}"/>
 
     <instantiate from="root/src/main/java/ui/SimpleFragment.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/ui/${fragmentName}.${ktOrJavaExt}"/>
@@ -31,7 +31,7 @@
     <open file="${escapeXmlAttribute(srcOut)}/domain/repository/${repositoryName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/domain/interactor/${interactorName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/data/entity/${entityName}.${ktOrJavaExt}"/>
-    <open file="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryName}Impl.${ktOrJavaExt}"/>
+    <open file="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryImpl}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${fragmentName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${viewModelName}.${ktOrJavaExt}"/>
 </recipe>
