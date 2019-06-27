@@ -67,15 +67,7 @@
             help="The name of the layout to create for the activity"/>
 
     <parameter
-            id="generateViewModel"
-            name="Generate viewmodel File"
-            type="boolean"
-            default="true"
-            help="If true, a viewmodel file will be generated"/>
-
-    <parameter
             id="viewModelName"
-            visibility="generateViewModel"
             name="ViewModel Name"
             type="string"
             constraints="class|unique|nonempty"
