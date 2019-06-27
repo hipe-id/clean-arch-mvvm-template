@@ -35,15 +35,31 @@
             help="The name of the layout to create for the activity"/>
 
     <parameter
+            id="generateModel"
+            name="Generate model File"
+            type="boolean"
+            default="true"
+            help="If true, a model file will be generated"/>
+
+    <parameter
             id="modelName"
             name="Model Name"
             type="string"
             constraints="class|unique|nonempty"
+            visibility="generateModel"
             default="Main"
             help="The name of the model for this feature"/>
 
     <parameter
+            id="generateViewModel"
+            name="Generate viewmodel File"
+            type="boolean"
+            default="true"
+            help="If true, a viewmodel file will be generated"/>
+
+    <parameter
             id="viewModelName"
+            visibility="generateViewModel"
             name="ViewModel Name"
             type="string"
             constraints="class|unique|nonempty"
@@ -51,9 +67,17 @@
             help="The name of the viewmodel for this feature"/>
 
     <parameter
+            id="generateInteractor"
+            name="Generate interactor File"
+            type="boolean"
+            default="true"
+            help="If true, a interactor file will be generated"/>
+
+    <parameter
             id="interactorName"
             name="Interactor Name"
             type="string"
+            visibility="generateInteractor"
             constraints="class|unique|nonempty"
             default="GetMain"
             help="The name of the (usecase) interactor for repo and model"/>
