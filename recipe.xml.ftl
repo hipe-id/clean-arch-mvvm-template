@@ -7,16 +7,16 @@
         <open file="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml"/>
     </#if>
 
-    <instantiate from="root/src/main/java/SimpleFragment.kt.ftl"
+    <instantiate from="root/src/main/java/SimpleFragment.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt"/>
 
-    <instantiate from="root/src/main/java/model/Simple.kt.ftl"
+    <instantiate from="root/src/main/java/model/Simple.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/model/${modelName}.kt"/>
 
-    <instantiate from="root/src/main/java/SimpleViewModel.kt.ftl"
+    <instantiate from="root/src/main/java/SimpleViewModel.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${viewModelName}.kt"/>
 
-    <instantiate from="root/src/main/java/interactor/GetSimple.kt.ftl"
+    <instantiate from="root/src/main/java/interactor/GetSimple.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/interactor/${interactorName}.kt"/>
 
     <open file="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt"/>
