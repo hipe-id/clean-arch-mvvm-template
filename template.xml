@@ -75,12 +75,29 @@
             help="The name of the layout to create for the activity"/>
 
     <parameter
+            id="generateViewModel"
+            name="Generate ViewModel File"
+            type="boolean"
+            default="true"
+            help="If true, a ViewModel file will be generated otherwise Presenter will"/>
+
+    <parameter
             id="viewModelName"
             name="ViewModel Name"
             type="string"
             constraints="class|unique|nonempty"
             default="MainViewModel"
+            visibility="generateViewModel"
             help="The name of the viewmodel for this feature"/>
+
+    <parameter
+            id="presenterName"
+            name="Presenter Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainPresenter"
+            visibility="!generateViewModel"
+            help="The name of the presenter for this feature"/>
 
     <parameter
             id="packageName"
@@ -92,7 +109,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>template_MVVM_activity.png</thumb>
+        <thumb>template_mvp_activity.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl"/>
