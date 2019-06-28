@@ -1,7 +1,8 @@
-package ${packageName}
+package ${packageName}.ui
 
 import android.os.Bundle
 import android.view.View
+
 import androidx.fragment.app.Fragment
 
 class ${fragmentName} : Fragment() {

@@ -1,4 +1,4 @@
-package ${packageName}
+package ${packageName}.ui
 
 import androidx.lifecycle.ViewModel
 import ${packageName}.domain.interactor.${interactorName}
