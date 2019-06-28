@@ -25,8 +25,8 @@
     <instantiate from="root/src/main/java/ui/SimpleFragment.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/ui/${fragmentName}.${ktOrJavaExt}"/>
 
-    <instantiate from="root/src/main/java/ui/SimpleViewModel.${ktOrJavaExt}.ftl"
-                 to="${escapeXmlAttribute(srcOut)}/ui/${viewModelName}.${ktOrJavaExt}"/>
+    <instantiate from="root/src/main/java/ui/viewmodel/SimpleViewModel.${ktOrJavaExt}.ftl"
+                 to="${escapeXmlAttribute(srcOut)}/ui/viewmodel/${viewModelName}.${ktOrJavaExt}"/>
 
     <instantiate from="root/src/main/java/ui/SimpleIntent.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/ui/${modelIntentName}.${ktOrJavaExt}"/>
@@ -36,6 +36,6 @@
     <open file="${escapeXmlAttribute(srcOut)}/data/entity/${entityName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryImpl}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${fragmentName}.${ktOrJavaExt}"/>
-    <open file="${escapeXmlAttribute(srcOut)}/ui/${viewModelName}.${ktOrJavaExt}"/>
+    <open file="${escapeXmlAttribute(srcOut)}/ui/viewmodel/${viewModelName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${modelIntentName}.${ktOrJavaExt}"/>
 </recipe>
