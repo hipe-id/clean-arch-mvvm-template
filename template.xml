@@ -51,6 +51,14 @@
             help="The name of the fragment class to create"/>
 
     <parameter
+            id="modelIntentName"
+            name="Model Intent Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainIntent"
+            help="The name of the model modelIntent class to create"/>
+
+    <parameter
             id="generateLayout"
             name="Generate Layout File"
             type="boolean"

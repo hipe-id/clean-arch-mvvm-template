@@ -28,10 +28,14 @@
     <instantiate from="root/src/main/java/ui/SimpleViewModel.${ktOrJavaExt}.ftl"
                  to="${escapeXmlAttribute(srcOut)}/ui/${viewModelName}.${ktOrJavaExt}"/>
 
+    <instantiate from="root/src/main/java/ui/SimpleIntent.${ktOrJavaExt}.ftl"
+                 to="${escapeXmlAttribute(srcOut)}/ui/${modelIntentName}.${ktOrJavaExt}"/>
+
     <open file="${escapeXmlAttribute(srcOut)}/domain/repository/${repositoryName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/domain/interactor/${interactorName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/data/entity/${entityName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/data/repository/${repositoryImpl}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${fragmentName}.${ktOrJavaExt}"/>
     <open file="${escapeXmlAttribute(srcOut)}/ui/${viewModelName}.${ktOrJavaExt}"/>
+    <open file="${escapeXmlAttribute(srcOut)}/ui/${modelIntentName}.${ktOrJavaExt}"/>
 </recipe>

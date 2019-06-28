@@ -5,7 +5,26 @@
 - move/copy root directory into /Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/clean-arch-mvvm-template
 - restart your android studio
 
+### Requirement
+##### Parcelize (Kotlin only)
+- Kotlin version 1.1.4 or newer
+- Add this code to your app/gradle
+`
+android {
+    // ...
+    androidExtensions {
+        experimental = true
+    }
+    // ... 
+}
+`
+- `apply plugin: 'kotlin-android-extensions'`
+##### Parcelable generator
+- ![How to install the plugin](https://i.imgur.com/jceThxd.gif)
+- [Full article tutorial](https://corochann.com/fast-easy-parcelable-implementation-with-android-studio-parcelable-plugin-641.html)
+  
 ### 3 Layer
+```
 presentation
     ^
     |
@@ -13,19 +32,19 @@ presentation
     ^
     |
   domain (knows nothing about the outer layer, this is innermost layer)
-  
+```
 
 ### Description
-- This template will use best practice to implement clean arch, to prevent misusing the architecture
+This template inshaa Allah use best practice to implement clean arch, to avoid misusing the architecture
 1. domain layer
-- entity act as a mapper / transformer
+    - entity act as a mapper / transformer
 2. data layer
-- model
-- repository (local, mock, network)
+    - model
+    - repository (local, mock, network)
 3. presentation layer 
-- mvvm
+    - mvvm
 4. utils layer (available for all layer, not included on this template)
-- components, widget, custom ui, permission, utils
+    - components, widget, custom ui, permission, utils
 
 ### TODO
 - [ ] Restrict minimum [dependencies to add](https://www.i-programmer.info/professional-programmer/resources-and-tools/6845-android-adt-template-format-document.html) go to *<dependency>* 
