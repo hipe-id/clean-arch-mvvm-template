@@ -1,8 +1,8 @@
-package ${packageName}.ui;
+package ${packageName}.ui.presenter;
 
 import ${packageName}.domain.interactor.${interactorName};
 
-public class ${viewModelName} {
+public class ${presenterName} {
 
     // TODO: Adjust your needs here
     private ${interactorName} ${interactorName?uncap_first};
