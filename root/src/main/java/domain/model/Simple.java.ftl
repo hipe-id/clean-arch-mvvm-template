@@ -5,7 +5,7 @@ public class ${modelName} {
 
     private Integer id;
 
-    public Main(Integer id) {
+    public ${modelName}(Integer id) {
         this.id = id;
     }
 }

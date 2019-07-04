@@ -11,38 +11,6 @@
     <formfactor value="Mobile"/>
 
     <parameter
-            id="modelName"
-            name="Model Name"
-            type="string"
-            constraints="class|unique|nonempty"
-            default="Main"
-            help="The name of the model for this feature"/>
-
-    <parameter
-            id="interactorName"
-            name="Interactor Name"
-            type="string"
-            constraints="class|unique|nonempty"
-            default="GetMain"
-            help="The name of the (usecase) interactor for repo and model"/>
-
-    <parameter
-            id="entityName"
-            name="Entity Name"
-            type="string"
-            constraints="class|unique|nonempty"
-            default="MainEntity"
-            help="The name of the (usecase) entity for repo and model"/>
-
-    <parameter
-            id="repositoryName"
-            name="Repository Name"
-            type="string"
-            constraints="class|unique|nonempty"
-            default="MainRepository"
-            help="The name of the interface repository"/>
-
-    <parameter
             id="fragmentName"
             name="Fragment Name"
             type="string"
@@ -55,6 +23,7 @@
             name="Model Intent Name"
             type="string"
             constraints="class|unique|nonempty"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}Intent"
             default="MainIntent"
             help="The name of the model modelIntent class to create"/>
 
@@ -71,8 +40,52 @@
             type="string"
             constraints="layout|unique|nonempty"
             default="fragment_main"
+            suggest="${classToResource(fragmentName)}_fragment"
             visibility="generateLayout"
             help="The name of the layout to create for the activity"/>
+
+    <parameter
+            id="modelName"
+            name="Model Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="Main"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}"
+            help="The name of the model for this feature"/>
+
+    <parameter
+            id="interactorName"
+            name="Interactor Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            suggest="Get${underscoreToCamelCase(classToResource(fragmentName))}"
+            default="GetMain"
+            help="The name of the (usecase) interactor for repo and model"/>
+
+    <parameter
+            id="entityName"
+            name="Entity Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainEntity"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}Entity"
+            help="The name of the (usecase) entity for repo and model"/>
+
+    <parameter
+            id="repositoryName"
+            name="Repository Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainRepository"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}Repository"
+            help="The name of the interface repository"/>
+
+    <parameter
+            id="generateViewModel"
+            name="Generate ViewModel File"
+            type="boolean"
+            default="true"
+            help="If true, a ViewModel file will be generated otherwise Presenter will"/>
 
     <parameter
             id="viewModelName"
@@ -80,7 +93,19 @@
             type="string"
             constraints="class|unique|nonempty"
             default="MainViewModel"
+            visibility="generateViewModel"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}ViewModel"
             help="The name of the viewmodel for this feature"/>
+
+    <parameter
+            id="presenterName"
+            name="Presenter Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="MainPresenter"
+            suggest="${underscoreToCamelCase(classToResource(fragmentName))}Presenter"
+            visibility="!generateViewModel"
+            help="The name of the presenter for this feature"/>
 
     <parameter
             id="packageName"
@@ -92,7 +117,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>template_MVVM_activity.png</thumb>
+        <thumb>template_mvp_activity.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl"/>

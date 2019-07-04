@@ -1,5 +1,7 @@
 package ${packageName}.domain.interactor;
 
+import ${packageName}.domain.repository.${repositoryName};
+
 public class ${interactorName} {
 
     // TODO: This is an example of Use case (interactor between repo and model)
